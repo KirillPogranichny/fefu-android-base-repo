@@ -43,8 +43,9 @@
         android:layout_marginTop="50dp"
         android:hint="@string/title_mainpage"
 
+        android:setextColor="#1F1F1F"
         android:textAlignment="center"
-        android:textColor="#1F1F1F"
+        android:textColor="#1f1f1f"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,4 +4,10 @@
     <string name="title_description">Созданный студентами <br>2-ого курса</br></string>
     <string name="registration_button_text">Зарегистрироваться</string>
     <string name="yet_registrated_button">Уже есть аккаунт?</string>
+    <string name="login_screen_title">Вход</string>
+    <string name="login_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
+    <string name="continue_button">Продолжить</string>
+
+
 </resources>
