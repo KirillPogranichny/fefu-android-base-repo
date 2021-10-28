@@ -8,6 +8,14 @@
     <string name="login_hint">Логин</string>
     <string name="password_hint">Пароль</string>
     <string name="continue_button">Продолжить</string>
-
+    <string name="registration_screen_title">Регистрация</string>
+    <string name="registration_double_field">Повторите пароль</string>
+    <string name="registration_nickname_field">Имя или никнейм</string>
+    <string name="registration_sexchoice_field">Пол</string>
+    <string name="registration_screen_footer">Нажимая на кнопку, вы соглашаетесь с
+        <a href="https://www.placecage.com/256/256">политикой конфиденциальности</a>
+        и обработки персональных данных, а также принимаете
+        <a href="https://www.placecage.com/256/256">пользовательское соглашение</a>
+    </string>
 
 </resources>
