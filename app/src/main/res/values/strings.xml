@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">Activity Tracker</string>
     <string name="main_page_title">Пожалуй лучший фитнес трекер в ДВФУ</string>
     <string name="main_page_description">Созданный студентами <br>2-ого курса</br></string>
     <string name="main_page_registration_button">Зарегистрироваться</string>
