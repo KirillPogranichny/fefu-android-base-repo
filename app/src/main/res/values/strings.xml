@@ -1,21 +1,19 @@
 <resources>
-    <string name="app_name">Activity Tracker</string>
-    <string name="title_mainpage">Пожалуй лучший фитнес трекер в ДВФУ</string>
-    <string name="title_description">Созданный студентами <br>2-ого курса</br></string>
-    <string name="registration_button_text">Зарегистрироваться</string>
-    <string name="yet_registrated_button">Уже есть аккаунт?</string>
-    <string name="login_screen_title">Вход</string>
+    <string name="main_page_title">Пожалуй лучший фитнес трекер в ДВФУ</string>
+    <string name="main_page_description">Созданный студентами <br>2-ого курса</br></string>
+    <string name="main_page_registration_button">Зарегистрироваться</string>
+    <string name="main_page_login_button">Уже есть аккаунт?</string>
+
+    <string name="registration_page_title">Регистрация</string>
+    <string name="registration_page_sex_placeholder">Пол</string>
+    <string name="registration_page_footer">Нажимая на кнопку, вы соглашаетесь с <a href="https://www.placecage.com/256/256">политикой конфиденциальности</a> и обработки персональных данных, а также принимаете <a href="https://www.placecage.com/256/256">пользовательское соглашение</a></string>
+
+    <string name="login_page_title">Вход</string>
+
+    <string name="continue_hint">Продолжить</string>
     <string name="login_hint">Логин</string>
     <string name="password_hint">Пароль</string>
-    <string name="continue_button">Продолжить</string>
-    <string name="registration_screen_title">Регистрация</string>
-    <string name="registration_double_field">Повторите пароль</string>
-    <string name="registration_nickname_field">Имя или никнейм</string>
-    <string name="registration_sexchoice_field">Пол</string>
-    <string name="registration_screen_footer">Нажимая на кнопку, вы соглашаетесь с
-        <a href="https://www.placecage.com/256/256">политикой конфиденциальности</a>
-        и обработки персональных данных, а также принимаете
-        <a href="https://www.placecage.com/256/256">пользовательское соглашение</a>
-    </string>
+    <string name="password_repeat_hint">Повторите пароль</string>
+    <string name="nickname_hint">Имя или никнейм</string>
 
 </resources>

@@ -7,7 +7,7 @@
 
     <ImageButton
         android:id="@+id/goBackButton"
-        style="@style/ArrowBackButton"
+        style="@style/BackArrowButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,8 +16,8 @@
     <TextView
         android:id="@+id/registrationTitle"
 
-        style="@style/ScreenTitle"
-        android:text="@string/registration_screen_title"
+        style="@style/PageTitle"
+        android:text="@string/registration_page_title"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:id="@+id/scrollableInputFields"
+        android:id="@+id/scrollableInputPlaceholders"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +78,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/duplicatePasswordInputLayout"
+                android:id="@+id/repeatPasswordInputLayout"
 
                 style="@style/TextInputLayout"
 
@@ -89,24 +89,24 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/registration_double_field"
+                    android:hint="@string/password_repeat_hint"
                     tools:ignore="TextContrastCheck" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/nameInputLayout"
+                android:id="@+id/nicknameInputLayout"
 
                 style="@style/TextInputLayout"
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/duplicatePasswordInputLayout">
+                app:layout_constraintTop_toBottomOf="@id/repeatPasswordInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/registration_nickname_field"
+                    android:hint="@string/nickname_hint"
                     tools:ignore="TextContrastCheck" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -119,13 +119,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp"
 
-                android:hint="@string/registration_sexchoice_field"
-                app:endIconDrawable="@drawable/arrow_sexchoise"
+                android:hint="@string/registration_page_sex_placeholder"
+                app:endIconDrawable="@drawable/ic_arrow_sex"
 
                 app:layout_constraintBottom_toTopOf="@id/continueButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/nameInputLayout">
+                app:layout_constraintTop_toBottomOf="@id/nicknameInputLayout">
 
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:layout_width="match_parent"
@@ -139,18 +139,18 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/continueButton"
 
-                style="@style/FilledButton"
+                style="@style/StyleButton"
 
                 android:layout_marginTop="40dp"
-                android:text="@string/continue_button"
+                android:text="@string/continue_hint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sexInputLayout" />
 
             <TextView
-                android:id="@+id/importantInfo"
+                android:id="@+id/footerText"
 
-                style="@style/Text"
+                style="@style/TextAlignCenter"
 
                 android:layout_width="match_parent"
 
@@ -158,27 +158,27 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
-                android:text="@string/registration_screen_footer"
-                android:textColor="#000000"
-                android:textColorLink="#4B09F3"
+                android:text="@string/registration_page_footer"
+                android:textColor="@color/black"
+                android:textColorLink="@color/color_button"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@id/appTitle"
+                app:layout_constraintBottom_toTopOf="@id/appName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/continueButton"
                 tools:ignore="LinkPurposeUnclearCheck" />
 
             <ImageView
-                android:id="@+id/appTitle"
+                android:id="@+id/appName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
-                android:src="@drawable/ic_activity_registration"
+                android:src="@drawable/ic_registration_activity_text"
                 app:layout_constraintBottom_toTopOf="@+id/appLogo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/importantInfo" />
+                app:layout_constraintTop_toBottomOf="@+id/footerText" />
 
             <ImageView
                 android:id="@+id/appLogo"
@@ -186,12 +186,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="52dp"
-                android:src="@drawable/ic_logo_registration"
+                android:src="@drawable/ic_registration_logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appTitle" />
+                app:layout_constraintTop_toBottomOf="@id/appName" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

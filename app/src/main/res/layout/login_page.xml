@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        style="@style/ArrowBackButton"
+        style="@style/BackArrowButton"
         android:id="@+id/goBackButton"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,8 +18,8 @@
     <TextView
         android:id="@+id/loginTitle"
 
-        style="@style/ScreenTitle"
-        android:text="@string/login_screen_title"
+        style="@style/PageTitle"
+        android:text="@string/login_page_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -66,10 +66,10 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/continueButton"
 
-        style="@style/FilledButton"
+        style="@style/StyleButton"
 
         android:layout_marginTop="40dp"
-        android:text="@string/continue_button"
+        android:text="@string/continue_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
