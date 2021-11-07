@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/mainBackgroundHeader"
-        android:src="@drawable/ic_main_background"
-        android:scaleType="fitXY"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:contentDescription="@string/main_page_header"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_main_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/appLogo"
@@ -22,10 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:contentDescription="@string/logo_app"
         android:src="@drawable/ic_main_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainBackgroundHeader" />
+        app:layout_constraintEnd_toEndOf="@+id/mainBackgroundHeader"
+        app:layout_constraintStart_toStartOf="@+id/mainBackgroundHeader"
+        app:layout_constraintTop_toBottomOf="@+id/mainBackgroundHeader" />
 
     <ImageView
         android:id="@+id/appName"
@@ -34,9 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
 
+        android:contentDescription="@string/title_app"
         android:src="@drawable/ic_main_activity_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/appLogo"
+        app:layout_constraintStart_toStartOf="@+id/appLogo"
         app:layout_constraintTop_toBottomOf="@+id/appLogo" />
 
     <TextView
@@ -47,8 +50,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         android:layout_marginBottom="13dp"
         android:text="@string/main_page_title"
         android:textColor="@color/color_main_title"
@@ -56,8 +57,8 @@
         android:textStyle="bold
 "
         app:layout_constraintBottom_toTopOf="@id/mainDescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/appName"
+        app:layout_constraintStart_toStartOf="@+id/appName"
         app:layout_constraintTop_toBottomOf="@+id/appName"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -73,8 +74,9 @@
         android:textColor="@color/color_main_description"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/registrationButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mainTitle"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/mainTitle"
         app:layout_constraintTop_toBottomOf="@+id/mainTitle"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -84,10 +86,11 @@
         style="@style/StyleButton"
 
         android:layout_marginBottom="4dp"
+        android:onClick="onClickRegistrationButton"
         android:text="@string/main_page_registration_button"
         app:layout_constraintBottom_toTopOf="@id/loginButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/mainDescription"
+        app:layout_constraintStart_toStartOf="@+id/mainDescription" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"
@@ -96,12 +99,13 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="75dp"
 
+        android:layout_marginBottom="75dp"
+        android:onClick="onClickLoginButton"
         android:text="@string/main_page_login_button"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/registrationButton"
+        app:layout_constraintStart_toStartOf="@+id/registrationButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

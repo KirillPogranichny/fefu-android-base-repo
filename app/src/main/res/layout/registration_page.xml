@@ -8,6 +8,7 @@
     <ImageButton
         android:id="@+id/goBackButton"
         style="@style/BackArrowButton"
+        android:contentDescription="@string/arrowback_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,8 +64,8 @@
 
                 style="@style/TextInputLayout"
 
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/loginInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/loginInputLayout"
 
                 app:layout_constraintTop_toBottomOf="@id/loginInputLayout"
                 app:passwordToggleEnabled="true">
@@ -82,7 +83,8 @@
 
                 style="@style/TextInputLayout"
 
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/passwordInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/passwordInputLayout"
                 app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout"
                 app:passwordToggleEnabled="true">
 
@@ -99,8 +101,8 @@
 
                 style="@style/TextInputLayout"
 
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/repeatPasswordInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/repeatPasswordInputLayout"
                 app:layout_constraintTop_toBottomOf="@id/repeatPasswordInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -121,10 +123,11 @@
 
                 android:hint="@string/registration_page_sex_placeholder"
                 app:endIconDrawable="@drawable/ic_arrow_sex"
+                android:onClick="sexChoseDropDownMenu"
 
                 app:layout_constraintBottom_toTopOf="@id/continueButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/nicknameInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/nicknameInputLayout"
                 app:layout_constraintTop_toBottomOf="@id/nicknameInputLayout">
 
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
@@ -141,10 +144,11 @@
 
                 style="@style/StyleButton"
 
+                android:layout_width="wrap_content"
                 android:layout_marginTop="40dp"
                 android:text="@string/continue_hint"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/sexInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/sexInputLayout"
                 app:layout_constraintTop_toBottomOf="@+id/sexInputLayout" />
 
             <TextView
@@ -152,45 +156,44 @@
 
                 style="@style/TextAlignCenter"
 
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
 
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginRight="15dp"
                 android:text="@string/registration_page_footer"
                 android:textColor="@color/black"
                 android:textColorLink="@color/color_button"
                 android:textSize="16sp"
+                android:onClick="enableLinks"
                 app:layout_constraintBottom_toTopOf="@id/appName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/continueButton"
+                app:layout_constraintStart_toStartOf="@+id/continueButton"
                 app:layout_constraintTop_toBottomOf="@+id/continueButton"
                 tools:ignore="LinkPurposeUnclearCheck" />
 
             <ImageView
                 android:id="@+id/appName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:contentDescription="@string/title_app"
                 android:src="@drawable/ic_registration_activity_text"
                 app:layout_constraintBottom_toTopOf="@+id/appLogo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/footerText"
                 app:layout_constraintTop_toBottomOf="@+id/footerText" />
 
             <ImageView
                 android:id="@+id/appLogo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="19dp"
+                android:layout_height="14dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="52dp"
+                android:contentDescription="@string/logo_app"
                 android:src="@drawable/ic_registration_logo"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/appName"
+                app:layout_constraintStart_toStartOf="@+id/appName"
                 app:layout_constraintTop_toBottomOf="@id/appName" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
