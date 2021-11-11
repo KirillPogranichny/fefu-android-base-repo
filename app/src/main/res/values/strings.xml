@@ -25,4 +25,9 @@
     <string name="sex_woman">Женский</string>
     <string name="sex_other">Не указывать</string>
 
+    <string name="activity_page_my">Мои</string>
+    <string name="activity_page_users">Пользователей</string>
+    <string name="action_activity">Активность</string>
+    <string name="action_profile">Профиль</string>
+
 </resources>
