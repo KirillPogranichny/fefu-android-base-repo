@@ -10,24 +10,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Activity">
+
         <activity
-            android:name=".screens.activity.ActivitiesScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".screens.main.MainScreenActivity"
-            android:exported="true">
+            android:name=".screens.activities.MainScreenActivity"
+            android:exported="true" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
-
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".screens.registration.RegistrationScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".screens.login.LoginScreenActivity"
-            android:exported="false" />
+
+<!--        <activity-->
+<!--            android:name=".screens.main.MainScreenActivity"-->
+<!--            android:exported="true" />-->
+<!--&lt;!&ndash;            <intent-filter>&ndash;&gt;-->
+<!--&lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+<!--&lt;!&ndash;        </activity>&ndash;&gt;-->
+
+<!--        <activity-->
+<!--            android:name=".screens.registration.RegistrationScreenActivity"-->
+<!--            android:exported="false" />-->
+
+<!--        <activity-->
+<!--            android:name=".screens.login.LoginScreenActivity"-->
+<!--            android:exported="false" />-->
+
     </application>
 
 </manifest>
