@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker.screens.registration
+package ru.fefu.activitytracker.screens.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,14 +7,15 @@ import android.view.View
 import android.widget.ArrayAdapter
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import ru.fefu.activitytracker.R
-import ru.fefu.activitytracker.databinding.RegistrationPageBinding
+import ru.fefu.activitytracker.databinding.ActivityRegistrationBinding
+
 
 class RegistrationScreenActivity : AppCompatActivity() {
-    lateinit var bindingClass: RegistrationPageBinding
+    lateinit var bindingClass: ActivityRegistrationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingClass = RegistrationPageBinding.inflate(layoutInflater)
+        bindingClass = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
         bindingClass.goBackButton.setOnClickListener{

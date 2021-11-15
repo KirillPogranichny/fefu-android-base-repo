@@ -1,19 +1,18 @@
-package ru.fefu.activitytracker.screens.main
+package ru.fefu.activitytracker.screens.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import ru.fefu.activitytracker.databinding.MainPageBinding
-import ru.fefu.activitytracker.screens.login.LoginScreenActivity
-import ru.fefu.activitytracker.screens.registration.RegistrationScreenActivity
+import ru.fefu.activitytracker.databinding.ActivityWelcomeBinding
 
-class MainScreenActivity : AppCompatActivity() {
-    lateinit var bindingClass: MainPageBinding
+
+class WelcomeScreenActivity : AppCompatActivity() {
+    lateinit var bindingClass: ActivityWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingClass = MainPageBinding.inflate(layoutInflater)
+        bindingClass = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
     }
 
