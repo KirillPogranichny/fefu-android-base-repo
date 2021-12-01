@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker.screens.fragments
+package ru.fefu.activitytracker.screens.activities.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import ru.fefu.activitytracker.R
 import ru.fefu.activitytracker.databinding.FragmentActionBinding
-import ru.fefu.activitytracker.screens.adapters.FragmentAdapter
+import ru.fefu.activitytracker.screens.activities.adapters.FragmentAdapter
 
 
 class FragmentAction : Fragment() {

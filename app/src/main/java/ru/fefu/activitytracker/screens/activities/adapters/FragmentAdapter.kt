@@ -1,9 +1,9 @@
-package ru.fefu.activitytracker.screens.adapters
+package ru.fefu.activitytracker.screens.activities.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import ru.fefu.activitytracker.screens.fragments.FragmentMy
-import ru.fefu.activitytracker.screens.fragments.FragmentUsers
+import ru.fefu.activitytracker.screens.activities.fragments.FragmentMy
+import ru.fefu.activitytracker.screens.activities.fragments.FragmentUsers
 
 
 class FragmentAdapter(frag : Fragment) : FragmentStateAdapter(frag) {

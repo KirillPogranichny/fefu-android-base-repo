@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import ru.fefu.activitytracker.R
-import ru.fefu.activitytracker.screens.fragments.FragmentAction
-import ru.fefu.activitytracker.screens.fragments.FragmentProfile
+import ru.fefu.activitytracker.screens.activities.fragments.FragmentAction
+import ru.fefu.activitytracker.screens.activities.fragments.FragmentProfile
 
 
 class MainScreenActivity : AppCompatActivity() {

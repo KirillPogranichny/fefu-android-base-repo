@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.fragments.FragmentProfile">
+    tools:context=".screens.activities.fragments.FragmentProfile">
 
     <TextView
         android:id="@+id/users_demo_text"
