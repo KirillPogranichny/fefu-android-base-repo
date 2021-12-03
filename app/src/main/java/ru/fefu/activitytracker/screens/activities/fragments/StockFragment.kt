@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker
+package ru.fefu.activitytracker.screens.activities.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import java.lang.reflect.ParameterizedType
 
-
-open class BaseFragment<V: ViewBinding>(@LayoutRes layoutResId: Int): Fragment(layoutResId) {
+open class StockFragment<V: ViewBinding>(@LayoutRes layoutResId: Int): Fragment(layoutResId) {
 
     private var _binding: V? = null
 
