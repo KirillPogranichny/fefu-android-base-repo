@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker.screens.activities
+package ru.fefu.activitytracker.screens.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

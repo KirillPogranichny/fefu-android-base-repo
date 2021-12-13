@@ -11,5 +11,7 @@
     <color name="color_input_text">#818181</color>
     <color name="color_main_title">#1F1F1F</color>
     <color name="color_main_description">#767676</color>
+    <color name="grey">#808080</color>
+    <color name="snow_white">#F5F5F5</color>
 
 </resources>

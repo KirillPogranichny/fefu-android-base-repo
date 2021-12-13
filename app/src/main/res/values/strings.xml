@@ -32,4 +32,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="comment_hint">Комментарий</string>
+    <string name="action_card_start_text">Старт</string>
+    <string name="action_card_finish_text">Финиш</string>
+    <string name="comment_user">Я бежал очень сильно, ты так не сможешь</string>
+    <string name="user_distance">14.32 км</string>
+    <string name="user_time_ago">14 часов назад</string>
+    <string name="user_time">1 ч 42 мин</string>
+    <string name="separator_stick">|</string>
+    <string name="action_card_start_time">14:49</string>
+    <string name="action_card_finish_time">16:31</string>
+    <string name="bicycle_title">Велосипед 🚲</string>
+
+
+
 </resources>

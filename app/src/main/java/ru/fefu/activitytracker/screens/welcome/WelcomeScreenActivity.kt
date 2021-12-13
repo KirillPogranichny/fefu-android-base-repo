@@ -1,10 +1,12 @@
-package ru.fefu.activitytracker.screens.activities
+package ru.fefu.activitytracker.screens.welcome
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import ru.fefu.activitytracker.databinding.ActivityWelcomeBinding
+import ru.fefu.activitytracker.screens.registration.RegistrationScreenActivity
+import ru.fefu.activitytracker.screens.login.LoginScreenActivity
 
 
 class WelcomeScreenActivity : AppCompatActivity() {
