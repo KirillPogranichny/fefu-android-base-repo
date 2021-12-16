@@ -27,6 +27,9 @@
         <activity
             android:name=".screens.registration.RegistrationScreenActivity"
             android:exported="true" />
+        <activity
+            android:name=".screens.map.MapActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

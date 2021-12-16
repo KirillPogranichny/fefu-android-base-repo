@@ -7,6 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import ru.fefu.activitytracker.screens.activities.fragments.MyActionsFragment
 import ru.fefu.activitytracker.screens.activities.fragments.UsersActionsFragment
 
+
 class ViewAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
     override fun getItemCount(): Int = 2
 
