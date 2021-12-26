@@ -12,6 +12,7 @@ import ru.fefu.activitytracker.R
 import ru.fefu.activitytracker.screens.map.cards.items.TypeCard
 import ru.fefu.activitytracker.screens.map.cards.items.TypeCardName
 
+
 class TypeListAdapter (cards: List<TypeCard>): RecyclerView.Adapter<TypeListAdapter.TypeListViewHolder>(){
     private val Cards = cards.toMutableList()
     private var cardClickListener: (Int) -> Unit = {}
@@ -20,6 +21,7 @@ class TypeListAdapter (cards: List<TypeCard>): RecyclerView.Adapter<TypeListAdap
     private var itemClickListener: (Int, TypeCardName) -> Unit = {
         _, _ ->
     }
+
     fun setItemClickListener(listener: (Int, TypeCardName) -> Unit) {
         itemClickListener = listener
     }
@@ -71,6 +73,5 @@ class TypeListAdapter (cards: List<TypeCard>): RecyclerView.Adapter<TypeListAdap
                 }
             }
         }
-
     }
 }

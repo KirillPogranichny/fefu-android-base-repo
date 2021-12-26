@@ -6,16 +6,26 @@
 
     <fragment
         android:id="@+id/activityStartFragment"
-        android:name="ru.fefu.activitytracker.screens.activities.fragments.StartFragment"
+        android:name="ru.fefu.activitytracker.screens.map.fragments.StartFragment"
         android:label="ActivityStartFragment">
         <action
             android:id="@+id/action_activityStartFragment_to_activityTrackFragment"
-            app:destination="@id/activityTrackFragment"/>
+            app:destination="@id/activityTrackFragment">
+            <argument
+                android:name="activityId"
+                app:argType="integer"
+                />
+            <argument
+                android:name="reassembled"
+                app:argType="boolean"
+                android:defaultValue="false"
+                />
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/activityTrackFragment"
-        android:name="ru.fefu.activitytracker.screens.activities.fragments.TrackFragment"
+        android:name="ru.fefu.activitytracker.screens.map.fragments.TrackFragment"
         android:label="ActivityTrackFragment">
     </fragment>
 </navigation>

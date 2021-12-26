@@ -14,18 +14,18 @@ fun LocalDateTime.toDateSeparator(): String {
     val dateTimeInMilliseconds = toInstant(ZoneOffset.UTC).toEpochMilli()
 
     val months = mapOf(
-            1 to "Январь",
-            2 to "Февраль",
-            3 to "Март",
-            4 to "Апрель",
-            5 to "Май",
-            6 to "Июнь",
-            7 to "Июль",
-            8 to "Август",
-            9 to "Сентябрь",
-            10 to "Октябрь",
-            11 to "Ноябрь",
-            12 to "Декабрь",
+        1 to "Январь",
+        2 to "Февраль",
+        3 to "Март",
+        4 to "Апрель",
+        5 to "Май",
+        6 to "Июнь",
+        7 to "Июль",
+        8 to "Август",
+        9 to "Сентябрь",
+        10 to "Октябрь",
+        11 to "Ноябрь",
+        12 to "Декабрь",
     )
 
     return when {
@@ -38,6 +38,7 @@ fun LocalDateTime.toDateSeparator(): String {
 @RequiresApi(Build.VERSION_CODES.O)
 fun LocalDateTime.toFinishDateOrTime(): String {
     val curDateTime = LocalDateTime.now()
+
     val duration = Duration.between(this, curDateTime)
 
     return when {
@@ -54,4 +55,11 @@ fun LocalDateTime.toTime(): String {
 @RequiresApi(Build.VERSION_CODES.O)
 fun Duration.toFormattedDurationBetween(): String {
     return "${toHours()} ч. ${toMinutes() % 60} м."
+}
+
+@RequiresApi(Build.VERSION_CODES.O)
+fun Duration.toTimerFormat(): String {
+    return "${toHours().toString().padStart(2, '0')}:" +
+            "${(toMinutes() % 60).toString().padStart(2, '0')}:" +
+            (toMillis() / 1000 % 60).toString().padStart(2, '0')
 }

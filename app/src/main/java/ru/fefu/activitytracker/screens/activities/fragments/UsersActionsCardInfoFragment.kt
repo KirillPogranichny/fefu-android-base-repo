@@ -10,6 +10,7 @@ import ru.fefu.activitytracker.databinding.UsersActionsCardInfoBinding
 
 
 class UsersActionsCardInfoFragment : StockFragment<UsersActionsCardInfoBinding>(R.layout.users_actions_card_info) {
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
