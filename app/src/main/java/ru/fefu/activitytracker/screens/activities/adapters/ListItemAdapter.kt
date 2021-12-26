@@ -10,6 +10,7 @@ import ru.fefu.activitytracker.databinding.*
 import ru.fefu.activitytracker.screens.activities.cards.items.ListItem
 import java.lang.IllegalArgumentException
 
+
 class ListItemAdapter : ListAdapter<ListItem, RecyclerView.ViewHolder>(ListItemCallback()) {
 
     private var itemClickListener: (Int) -> Unit = {}

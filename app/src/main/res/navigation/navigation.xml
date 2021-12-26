@@ -9,7 +9,11 @@
         android:label="ActivityMainFragment">
         <action
             android:id="@+id/action_activityMainFragment_to_myInfoFragment"
-            app:destination="@id/myInfoFragment" />
+            app:destination="@id/myInfoFragment">
+            <argument
+                android:name="id"
+                app:argType="integer"/>
+        </action>
         <action
             android:id="@+id/action_activityMainFragment_to_userInfoFragment"
             app:destination="@id/userInfoFragment" />
@@ -48,7 +52,12 @@
     <activity
         android:id="@+id/activityMap"
         android:name="ru.fefu.activitytracker.screens.map.MapActivity"
-        android:label="ActivityMap"
-        />
+        android:label="ActivityMap">
+        <argument
+            android:name="activityId"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+    </activity>
 
 </navigation>

@@ -2,6 +2,7 @@ package ru.fefu.activitytracker.screens.activities.cards.data
 
 import ru.fefu.activitytracker.screens.activities.cards.items.ListItem
 
+
 class UsersCardsData {
     private val cardslist = listOf(
             ListItem.DateCard(

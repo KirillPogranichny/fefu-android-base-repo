@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import ru.fefu.activitytracker.screens.room.MyDatabase
 
+
 class App : Application() {
     companion object {
         lateinit var INSTANCE: App
