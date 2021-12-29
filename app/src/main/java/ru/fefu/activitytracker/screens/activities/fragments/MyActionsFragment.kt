@@ -2,6 +2,7 @@ package ru.fefu.activitytracker.screens.activities.fragments
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ru.fefu.activitytracker.R
 import ru.fefu.activitytracker.databinding.FragmentMyBinding
@@ -24,24 +25,8 @@ class MyActionsFragment : StockFragment<FragmentMyBinding>(R.layout.fragment_my)
         }
 
         myListAdapter.setCardClickListener {
-            val fragmentManager = parentFragment?.parentFragmentManager
-            val currentFragment = fragmentManager?.findFragmentByTag("MyCardInfo")
-            val activityFragment = fragmentManager?.findFragmentByTag("activity")
-            fragmentManager?.beginTransaction()?.apply {
-                if (currentFragment != null) {
-                    detach(currentFragment)
-                }
-                add(
-                    R.id.fragmentContainer,
-                    MyActionsCardInfoFragment(),
-                    "MyCardInfo"
-                )
-                if (activityFragment != null) {
-                    detach(activityFragment)
-                }
-                addToBackStack("MyCardInfo")
-                commit()
-            }
+            val action = CollectionFragmentDirections.actionActivityMainFragmentToMyInfoFragment()
+            findNavController().navigate(action)
         }
     }
 }

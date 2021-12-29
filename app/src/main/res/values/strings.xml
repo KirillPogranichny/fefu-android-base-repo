@@ -44,6 +44,19 @@
     <string name="action_card_finish_time">16:31</string>
     <string name="bicycle_title">Велосипед 🚲</string>
 
+    <string name="change_password_text">Изменить пароль</string>
+    <string name="old_password_hint">Старый пароль</string>
+    <string name="new_password_hint">Новый пароль</string>
+    <string name="accept_text">Принять</string>
+    <string name="title_profile">Профиль</string>
+    <string name="save_text">Сохранить</string>
+    <string name="login_template_text">Supertox</string>
+    <string name="nickname_template_text">geraltizreevii</string>
+    <string name="password_change_btn">Изменить пароль</string>
+    <string name="exit_text">Выйти</string>
+
+    <string name="start_title">Погнали? :)</string>
+    <string name="start_button">Начать</string>
 
 
 </resources>
