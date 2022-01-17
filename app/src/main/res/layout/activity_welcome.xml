@@ -1,110 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/mainBackgroundHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-        android:contentDescription="@string/main_page_header"
+    <ImageView
+        android:id="@+id/waveImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_main_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_main_background" />
 
     <ImageView
-        android:id="@+id/appLogo"
-
+        android:id="@+id/logoImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:contentDescription="@string/logo_app"
-        android:src="@drawable/ic_main_logo"
-        app:layout_constraintEnd_toEndOf="@+id/mainBackgroundHeader"
-        app:layout_constraintStart_toStartOf="@+id/mainBackgroundHeader"
-        app:layout_constraintTop_toBottomOf="@+id/mainBackgroundHeader" />
+        app:layout_constraintBottom_toTopOf="@+id/logoText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_main_logo" />
 
     <ImageView
-        android:id="@+id/appName"
-
+        android:id="@+id/logoText"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/slogan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage"
+        app:srcCompat="@drawable/ic_main_activity_text" />
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:lines="2"
+        android:text="@string/main_page_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textCreated"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/waveImage"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textCreated"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-
-        android:contentDescription="@string/title_app"
-        android:src="@drawable/ic_main_activity_text"
-        app:layout_constraintEnd_toEndOf="@+id/appLogo"
-        app:layout_constraintStart_toStartOf="@+id/appLogo"
-        app:layout_constraintTop_toBottomOf="@+id/appLogo" />
-
-    <TextView
-        android:id="@+id/mainTitle"
-
-        style="@style/TextAlignCenter"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="13dp"
-        android:text="@string/main_page_title"
-        android:textColor="@color/color_main_title"
-        android:textSize="32sp"
-        android:textStyle="bold
-"
-        app:layout_constraintBottom_toTopOf="@id/mainDescription"
-        app:layout_constraintEnd_toEndOf="@+id/appName"
-        app:layout_constraintStart_toStartOf="@+id/appName"
-        app:layout_constraintTop_toBottomOf="@+id/appName"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <TextView
-        android:id="@+id/mainDescription"
-
-        style="@style/TextAlignCenter"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
+        android:fontFamily="sans-serif"
         android:text="@string/main_page_description"
-        android:textColor="@color/color_main_description"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/registrationButton"
-        app:layout_constraintEnd_toEndOf="@+id/mainTitle"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/mainTitle"
-        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/registrationButton"
-
-        style="@style/StyleButton"
-
-        android:layout_marginBottom="4dp"
-        android:onClick="onClickRegistrationButton"
-        android:text="@string/main_page_registration_button"
-        app:layout_constraintBottom_toTopOf="@id/loginButton"
-        app:layout_constraintEnd_toEndOf="@+id/mainDescription"
-        app:layout_constraintStart_toStartOf="@+id/mainDescription" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginButton"
-
-        style="@style/TextButton"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="75dp"
-        android:onClick="onClickLoginButton"
-        android:text="@string/main_page_login_button"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/registrationButton"
-        app:layout_constraintStart_toStartOf="@+id/registrationButton" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/slogan" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/button_blue"
+        android:fontFamily="sans-serif"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Зарегистрироваться"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCreated"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogin"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Уже есть аккаунт?"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
